@@ -123,11 +123,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CDialogManager.cpp" />
+    <ClCompile Include="CDlgCommand.cpp" />
     <ClCompile Include="DataChain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Workspace.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CDialogManager.h" />
+    <ClInclude Include="CDlgCommand.h" />
     <ClInclude Include="DataChain.h" />
     <ClInclude Include="Workspace.h" />
   </ItemGroup>
