@@ -21,9 +21,15 @@
     <ClCompile Include="DataChain.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
+    <ClCompile Include="Workspace.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataChain.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="Workspace.h">
       <Filter>Файлы ресурсов</Filter>
     </ClInclude>
   </ItemGroup>
