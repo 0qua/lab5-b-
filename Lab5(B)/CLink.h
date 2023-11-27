@@ -20,3 +20,4 @@ protected:
 };
 
 typedef std::vector<CLink*> LinksArray;
+

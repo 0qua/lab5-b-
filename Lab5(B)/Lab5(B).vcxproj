@@ -128,6 +128,7 @@
     <ClCompile Include="CDlgCommand.cpp" />
     <ClCompile Include="CLink.cpp" />
     <ClCompile Include="DataChain.cpp" />
+    <ClCompile Include="LinkURL.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Workspace.cpp" />
   </ItemGroup>
@@ -137,6 +138,7 @@
     <ClInclude Include="CDlgCommand.h" />
     <ClInclude Include="CLink.h" />
     <ClInclude Include="DataChain.h" />
+    <ClInclude Include="LinkURL.h" />
     <ClInclude Include="Workspace.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

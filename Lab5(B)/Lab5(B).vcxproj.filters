@@ -36,6 +36,9 @@
     <ClCompile Include="CDataSimple.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
+    <ClCompile Include="LinkURL.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataChain.h">
@@ -54,6 +57,9 @@
       <Filter>Файлы ресурсов</Filter>
     </ClInclude>
     <ClInclude Include="CDataSimple.h">
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkURL.h">
       <Filter>Файлы ресурсов</Filter>
     </ClInclude>
   </ItemGroup>

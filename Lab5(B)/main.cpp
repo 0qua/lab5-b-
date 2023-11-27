@@ -5,31 +5,62 @@
 #include "CDialogManager.h"
 #include "CDlgCommand.h"
 #include "CDataSimple.h"
+#include "LinkURL.h"
+#include "CLink.h"
 
 void Init(CWorkspace& ws);
 void ShowFullSequence(CWorkspace& ws);
 void Save(CWorkspace& ws);
 void Load(CWorkspace& ws);
 void FindSubstring(CWorkspace& ws);
+void RemoveLink(CWorkspace& ws);
+void AddURL(CWorkspace& ws);
+CWorkspace* pWorkspace;
 
 int main() {
 	CDataSimple data;
 	CWorkspace ws(data);
 	CDialogManager mgr(ws);
 
-	// Реєстрація команд
 	mgr.RegisterCommand("Init sequence", Init);
 	mgr.RegisterCommand("Show sequence", ShowFullSequence);
 	mgr.RegisterCommand("Save", Save);
 	mgr.RegisterCommand("Load", Load);
 	mgr.RegisterCommand("Find Substring", FindSubstring);
-	// Запуск діалогу з користувачем
+	mgr.RegisterCommand("Add URL", AddURL); 
+	mgr.RegisterCommand("Remove Link", RemoveLink);
 	mgr.Run();
 
 	return 0;
 }
 
-// Реалізація функцій для команд
+void AddURL(CWorkspace& ws) {
+	std::string url;
+	std::cout << "Enter URL to add: ";
+	std::cin >> url;
+
+	CLinkURL* pLinkURL = new CLinkURL(ws.GetChain());
+	if (pLinkURL->Attach(url.c_str())) {
+		std::cout << "URL added successfully." << std::endl;
+		ws.AddLink(0, url.length(), pLinkURL);
+	} else {
+		std::cout << "Failed to add URL." << std::endl;
+		delete pLinkURL;
+	}
+}
+
+void RemoveLink(CWorkspace& ws) {
+	int linkIndex;
+	std::cout << "Enter index of the link to remove: ";
+	std::cin >> linkIndex;
+
+	if (ws.RemoveLink(linkIndex)) {
+		std::cout << "Link removed successfully." << std::endl;
+	} else {
+		std::cout << "Failed to remove link." << std::endl;
+	}
+}
+
 void Init(CWorkspace& ws) {
 	int nDepth, nLength;
 	std::cout << "Enter depth and length: ";

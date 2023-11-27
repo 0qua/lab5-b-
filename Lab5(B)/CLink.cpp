@@ -5,6 +5,7 @@ CLink::CLink(CDataChain& refChain) : m_refChain(refChain), m_nPos(-1), m_nSize(0
 
 CLink::~CLink() {}
 
+
 bool CLink::Attach(const char* sSubStr) {
 	int pos = m_refChain.Find(sSubStr);
 	if (pos != -1) {
